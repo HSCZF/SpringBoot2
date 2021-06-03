@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="userTest" class="com.example.bean.User">
+        <property name="name" value="张三"></property>
+        <property name="age" value="18"></property>
+    </bean>
+
+    <bean id="petTest" class="com.example.bean.Pet">
+        <property name="name" value="宠物"></property>
+    </bean>
+
+
+</beans>

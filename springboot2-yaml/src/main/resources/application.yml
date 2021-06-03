@@ -1,0 +1,36 @@
+person:
+  userName: 张三
+  #  userName: "张三 \n 李四"
+  #  单引号会将 \n 作为字符串输出，双引号会将 \n 作为换行输出
+  #  双引号不会转义，单引号会转义
+  boss: true
+  birth: 2021/5/9
+  age: 18
+  #  interests 行内写法
+  #  interests: [篮球,足球]
+  interests:
+    - 篮球
+    - 足球
+    - 排球
+  animal: [阿猫,阿狗]
+  #  score:
+  #    english: 80
+  #    math: 90
+  score: {english: 80,math: 90}
+  salarys:
+    - 1999.95
+    - 1998.96
+  pet:
+    name: 阿狗
+    weight: 100
+  allPets:
+    sick:
+      - {name: 阿狗,weight: 100}
+      - name: 阿猫
+        weight: 99
+      - name: 啊虫
+        weight: 87
+    health:
+      - {name: 阿花,weight: 199.98}
+      - {name: 阿明,weight: 199.98}
+

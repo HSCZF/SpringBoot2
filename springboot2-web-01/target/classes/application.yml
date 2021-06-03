@@ -1,0 +1,18 @@
+#spring:
+#  mvc:
+#    static-path-pattern: /res/**  这个会导致welcome page功能、Favicon 功能都失效
+#可以配置静态资源路径
+#但是不可以配置静态资源的访问前缀。否则导致 index.html不能被默认访问
+#  resources:
+#    static-locations: [classpath:/haha/]
+# 2.4版本之后用下面这个配置,/haha/与classpath之间没有空格
+#  web:
+#    resources:
+#      static-locations: [classpath:/haha/]
+
+# reset风格请求方式
+spring:
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true

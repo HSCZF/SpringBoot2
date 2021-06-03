@@ -1,0 +1,40 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/mybatis
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+
+    druid:
+      aop-patterns: com.example.*  # springbean监控
+      filters: stat,wall,slf4j  # 所有开启的功能, stat(sql监控),wall(防火墙),slf4j(日志)
+      stat-view-servlet:        # 监控页配置
+        enabled: true
+        login-username: admin
+        login-password: 123456
+        reset-enable: false
+      web-stat-filter:          # web监控
+        enabled: true
+        url-pattern: /*
+        exclusions: '*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*'
+      filter:             # 对上面的filters的详细配置
+        stat:             # sql监控
+          slow-sql-millis: 1000
+          log-slow-sql: true
+          enabled: true
+        wall:            # 防火墙
+          enabled: true
+          config:
+            drop-table-allow: false
+
+  #    type: com.zaxxer.hikari.HikariDataSource
+  jdbc:
+    template:
+      query-timeout: 3
+
+# 配置mybatis规则、使用mybatis-plus则此规则失效，mybatis-plus有默认的位置，按要求即可,例如它的mapper路径为：classpath*:/mapper/**/*.xml；
+mybatis:
+  #  config-location: classpath:mybatis/mybatis-config.xml   # 全局配置文件位置
+  mapper-locations: classpath:mybatis/mapper/*.xml        # sql映射文件位置
+  configuration:      # 一旦使用这个，config-location就不要了，不能同时存在，2选一配置，这里使用yaml配置，推荐使用yaml配置
+    map-underscore-to-camel-case: true                    # 驼峰命名规则

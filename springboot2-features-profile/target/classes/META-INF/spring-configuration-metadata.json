@@ -1,0 +1,37 @@
+{
+  "groups": [
+    {
+      "name": "person",
+      "type": "com.example.boot.bean.Boss",
+      "sourceType": "com.example.boot.bean.Boss"
+    },
+    {
+      "name": "person",
+      "type": "com.example.boot.bean.Worker",
+      "sourceType": "com.example.boot.bean.Worker"
+    }
+  ],
+  "properties": [
+    {
+      "name": "person.age",
+      "type": "java.lang.Integer",
+      "sourceType": "com.example.boot.bean.Boss"
+    },
+    {
+      "name": "person.age",
+      "type": "java.lang.Integer",
+      "sourceType": "com.example.boot.bean.Worker"
+    },
+    {
+      "name": "person.name",
+      "type": "java.lang.String",
+      "sourceType": "com.example.boot.bean.Boss"
+    },
+    {
+      "name": "person.name",
+      "type": "java.lang.String",
+      "sourceType": "com.example.boot.bean.Worker"
+    }
+  ],
+  "hints": []
+}
